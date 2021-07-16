@@ -1,0 +1,17 @@
+{
+  "brokerId":"32567779152ISR",
+  "brokerFirstName":"Yaffa",
+  "brokerLastName":"Blumberg",
+  "brokerCompany":"Klal",
+  "communicationTypeDetails":{
+    "communicationType":"EMAIL",
+    "communicationDetails":"moshe@gmail.com"
+  },
+  "timeStamp":"2021-06-28 22:10:58",
+  "stockInfo":{
+    "stockTicker":"APPL",
+    "currentPrice":50.23,
+    "brokerAction":"SELL",
+    "actionRequestedAmount":50.0
+  }
+}

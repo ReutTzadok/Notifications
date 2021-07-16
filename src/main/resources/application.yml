@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    bootstrap-servers: 34.68.203.107:9092
+    consumer:
+      bootstrap-servers: 34.68.203.107:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: 34.68.203.107:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+emailDetailsPath: Data/passwords.txt

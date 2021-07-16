@@ -1,0 +1,17 @@
+{
+  "brokerId":"3256789152ISR",
+  "brokerFirstName":"Moshe",
+  "brokerLastName":"Cohen",
+  "brokerCompany":"Altshuler",
+  "communicationTypeDetails":{
+    "communicationType":"EMAIL",
+    "communicationDetails":"reut.b1212@gmail.com"
+  },
+  "timeStamp":"2021-06-28 22:10:58",
+  "stockInfo":{
+    "stockTicker":"APPL",
+    "currentPrice":50.23,
+    "brokerAction":"BUY",
+    "actionRequestedAmount":65.25
+  }
+}

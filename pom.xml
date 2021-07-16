@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.notification</groupId>
+	<artifactId>Notifications</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Notifications</name>
+	<description>Notification service</description>
+
+	<properties>
+		<java.version>11</java.version>
+<!--		<scala.version>2.12.0</scala.version>-->
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<!--        scala-->
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.13.1</version>
+		</dependency>
+
+
+<!--		Json-->
+		<dependency>
+			<groupId>org.json4s</groupId>
+			<artifactId>json4s-jackson_2.13</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+
+<!--		lombok-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+
+<!--		<dependency>-->
+<!--			<groupId>org.springframework</groupId>-->
+<!--			<artifactId>spring-context-support</artifactId>-->
+<!--			<version>5.3.8</version>-->
+<!--		</dependency>-->
+
+<!--		Email-->
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.kafka</groupId>-->
+<!--            <artifactId>kafka_2.13</artifactId>-->
+<!--			<version>2.4.1</version>-->
+<!--        </dependency>-->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+<!--			from Ofir-->
+			<plugin>
+				<groupId>org.scala-tools</groupId>
+				<artifactId>maven-scala-plugin</artifactId>
+				<version>2.15.2</version>
+			</plugin>
+
+<!--			<plugin>-->
+<!--				<groupId>net.alchim31.maven</groupId>-->
+<!--				<artifactId>scala-maven-plugin</artifactId>-->
+<!--&lt;!&ndash;				<version></version>&ndash;&gt;-->
+<!--&lt;!&ndash;				<recompileMode>incremental</recompileMode>&ndash;&gt;-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>scala-compile</id>-->
+<!--						<phase>process-resources</phase>-->
+<!--						<goals>-->
+<!--							<goal>add-source</goal>-->
+<!--							<goal>compile</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--					<execution>-->
+<!--						<id>scala-test-compile</id>-->
+<!--						<phase>process-test-resources</phase>-->
+<!--						<goals>-->
+<!--							<goal>testCompile</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<groupId>net.alchim31.maven</groupId>-->
+<!--				<artifactId>scala-maven-plugin</artifactId>-->
+<!--				<version>4.5.2</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>scala-compile-first</id>-->
+<!--						<phase>process-resources</phase>-->
+<!--						<goals>-->
+<!--							<goal>add-source</goal>-->
+<!--							<goal>compile</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--					<execution>-->
+<!--						<id>scala-test-compile</id>-->
+<!--						<phase>process-test-resources</phase>-->
+<!--						<goals>-->
+<!--							<goal>testCompile</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--				<version>2.5.2</version>-->
+<!--				<configuration>-->
+<!--					<excludes>-->
+<!--						<exclude>-->
+<!--							<groupId>org.projectlombok</groupId>-->
+<!--							<artifactId>lombok</artifactId>-->
+<!--						</exclude>-->
+<!--					</excludes>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+		</plugins>
+	</build>
+
+</project>
