@@ -46,8 +46,13 @@
 <!--		Json-->
 		<dependency>
 			<groupId>org.json4s</groupId>
+			<artifactId>json4s-ext_2.13</artifactId>
+			<version>3.6.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json4s</groupId>
 			<artifactId>json4s-jackson_2.13</artifactId>
-			<version>4.0.0</version>
+			<version>3.6.7</version>
 		</dependency>
 
 <!--		lombok-->

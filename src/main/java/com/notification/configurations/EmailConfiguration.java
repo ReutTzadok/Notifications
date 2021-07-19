@@ -45,19 +45,9 @@ public class EmailConfiguration {
         props.put("mail.transport.protocol", "smtp");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.debug", "true");
+        props.put("mail.debug", "false");
 
         return mailSender;
     }
 
-
-//    @Bean
-//    public SimpleMailMessage emailTemplate()
-//    {
-//        SimpleMailMessage message = new SimpleMailMessage();
-////        message.setTo("somebody@gmail.com");
-//        message.setFrom("StockAlerts@gmail.com");
-//        message.setText("FATAL - Application crash. Save your job !!");
-//        return message;
-//    }
 }

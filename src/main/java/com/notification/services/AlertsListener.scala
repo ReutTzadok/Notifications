@@ -1,22 +1,19 @@
 package com.notification.services
 
 
-import com.notification.models.Alert
-import org.json4s.DefaultFormats
+import com.notification.models.{Alert, NotificationMethod}
+import org.json4s.{DefaultFormats, Formats}
 import org.json4s.jackson.JsonMethods
-import org.springframework.beans.factory.annotation.Autowired
+import org.json4s.ext.EnumNameSerializer
 import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.stereotype.Service
 
+
 @Service
-class AlertsListener {
-  @Autowired
-  private val alertHandler: AlertHandler = null
+class AlertsListener(val alertHandler: AlertHandler) {
 
-
-  //todo move topic-2 and group id to application properties
-  implicit val formats: DefaultFormats.type = DefaultFormats
-  @KafkaListener(id = "group_id", topics = Array("topic-2"))
+  implicit lazy val formats: Formats = DefaultFormats + new EnumNameSerializer(NotificationMethod)
+  @KafkaListener(id = "${spring.kafka.consumer.group-id}", topics = Array("${spring.kafka.consumer.topic}"))
   def listen(jsonAlert: String): Unit = {
     println("message read\n" + jsonAlert)
 
