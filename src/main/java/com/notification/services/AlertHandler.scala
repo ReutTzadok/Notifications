@@ -1,6 +1,7 @@
 package com.notification.services
 
-import com.notification.models.NotificationMethod._
+import com.notification.models.BrokerAction.{BUY, SELL}
+import com.notification.models.CommunicationType._
 import com.notification.models.{Alert, StockInfo}
 import org.springframework.stereotype.Component
 
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component
 class AlertHandler (email: SendEmailNotification,
                    sms: SendSmsNotification){
 
-  private val sendNotificationsMethod:Map[NotificationMethod, SendNotification] = Map(
+  private val sendNotificationsMethod:Map[CommunicationType, SendNotification] = Map(
     (EMAIL, email),
     (SMS, sms)
   )
@@ -19,8 +20,8 @@ class AlertHandler (email: SendEmailNotification,
 
     //todo add "canceled" option
     val content = alert.stockInfo match {
-      case StockInfo(stockTicker, _, "BUY", actionRequestedAmount) => s"The price of $stockTicker stock is lower than $actionRequestedAmount"
-      case StockInfo(stockTicker, _, "SELL", actionRequestedAmount) => s"The price of $stockTicker stock is higher than $actionRequestedAmount"
+      case StockInfo(stockTicker, _, BUY, actionRequestedAmount) => s"The price of $stockTicker stock is lower than $actionRequestedAmount"
+      case StockInfo(stockTicker, _, SELL, actionRequestedAmount) => s"The price of $stockTicker stock is higher than $actionRequestedAmount"
     }
 
     sendNotificationsMethod(alert.communicationTypeDetails.communicationType)
