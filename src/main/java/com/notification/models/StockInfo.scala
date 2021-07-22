@@ -5,6 +5,6 @@ import com.notification.models.BrokerAction.BrokerAction
 case class StockInfo(
                       stockTicker: String,
                       currentPrice: Double,
-                      brokerAction: BrokerAction,
+                      brokerActionType: BrokerAction,
                       actionRequestedAmount: Double
                     )

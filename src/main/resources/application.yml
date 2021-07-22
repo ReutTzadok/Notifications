@@ -1,12 +1,12 @@
 spring:
   kafka:
-    bootstrap-servers: 34.132.167.130:9092
+    bootstrap-servers: 35.232.100.139:9092
     consumer:
       group-id: group_id
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      topic: topic-2
+      topic: notifications
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
